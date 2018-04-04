@@ -6,4 +6,7 @@
     <select id="findRole" parameterType="long" resultType="role">
         SELECT *FROM role WHERE id = #{id}
     </select>
+    <insert id="insertRole" parameterType="role">
+        INSERT INTO role(rolename,note,uid) VALUES (#{roleName},#{note},#{uid})
+    </insert>
 </mapper>
